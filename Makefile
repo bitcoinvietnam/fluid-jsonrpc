@@ -5,6 +5,9 @@ export PYTHONPATH=.
 
 all: format lint test
 
+clean:
+	find . -type f -name "*.py[co]" -delete -or -type d -name "__pycache__" -delete
+
 format:
 	black .
 
